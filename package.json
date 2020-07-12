@@ -6,7 +6,7 @@
   "repository": "https://github.com/mane936/react-blog",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
@@ -25,6 +25,7 @@
     "react-test-renderer": "15.5.4"
   },
   "dependencies": {
+    "axios": "0.16.1",
     "babel-cli": "6.24.1",
     "babel-loader": "7.0.0",
     "babel-polyfill": "6.23.0",
